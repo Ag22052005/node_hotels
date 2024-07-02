@@ -1,3 +1,4 @@
 # IGNORED FILES BY GIT
 
 node_modules/
+.env

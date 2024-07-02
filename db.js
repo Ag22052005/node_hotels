@@ -1,5 +1,9 @@
 const mongoose = require('mongoose');
-const mongoURL = 'mongodb+srv://admin:ashish%40123@ashishdb.ijyd4hz.mongodb.net/mydb?authSource=AshishDB&authMechanism=SCRAM-SHA-1'
+
+require('dotenv').config();
+
+const mongoURL = process.env.MONGO_URL
+
 
 mongoose.connect(mongoURL)
 
