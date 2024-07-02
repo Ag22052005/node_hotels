@@ -20,6 +20,6 @@ app.use('/person',personRoutes) // since the /person is common for all route hen
 const menuRoutes = require('./routes/menuRoutes')
 app.use('/',menuRoutes) // without extracting the /menu routes
 
-app.listen(3000,()=>{
+app.listen(PORT,()=>{
   console.log("Server is listening on port 3000")
 })
