@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const db = require('./db')
 const passport = require('./auth')
+// const jwt = require('./jwt.js')
 
 require('dotenv').config();
 
@@ -26,7 +27,7 @@ app.get('/',function (req, res) {
 
 
 const personRoutes = require('./routes/personRoutes')
-app.use('/person',localauthmiddleware ,personRoutes) // since the /person is common for all route hence we also extract from those routes and put here for all routes
+app.use('/person' ,personRoutes) // since the /person is common for all route hence we also extract from those routes and put here for all routes
 
 const menuRoutes = require('./routes/menuRoutes');
 app.use('/',menuRoutes) // without extracting the /menu routes
